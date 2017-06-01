@@ -1,0 +1,4 @@
+*        text=auto
+*.sln    merge=binary
+*.csproj merge=binary
+*.ai     binary
