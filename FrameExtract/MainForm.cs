@@ -27,7 +27,7 @@ namespace FrameExtract {
 			Show();
 
 			VerifyFf("ffmpeg", false);
-			VerifyOutfile(Path.Combine(_desktopPath, "snap-%t.png"));
+			VerifyOutfile(Path.Combine(_desktopPath, "snap-%t.bmp"));
 		}
 
 		private void ffbtn_Click(object sender, EventArgs e){
@@ -128,9 +128,9 @@ namespace FrameExtract {
 				CheckPathExists = true,
 				CheckFileExists = false,
 				AddExtension = true,
-				Filter = "PNG file|*.png|Bitmap|*.bmp|JPEG file|*.jpg;*.jpeg",
-				DefaultExt = "png",
-				FileName = _outfilepath.Length > 0 ? Path.GetFileName(_outfilepath) : "snap-%t.png",
+				Filter = "Bitmap|*.bmp|PNG file|*.png|JPEG file|*.jpg;*.jpeg",
+				DefaultExt = "bmp",
+				FileName = _outfilepath.Length > 0 ? Path.GetFileName(_outfilepath) : "snap-%t.bmp",
 				InitialDirectory = _desktopPath,
 			};
 			DialogResult result = fd.ShowDialog();
